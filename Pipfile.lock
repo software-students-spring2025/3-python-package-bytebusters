@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ed49f258af08b660cf0bd783a3f5f1c7d417378149ae41a46b8c43cb6c1519ed"
+            "sha256": "1a9bf8ed0ed1b61922f0e7f134fe08d8e959ffbd7306894698e36e63b133925f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -32,6 +32,10 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==2.0.0"
+        },
+        "morse-code-converter": {
+            "editable": true,
+            "file": "."
         },
         "packaging": {
             "hashes": [
