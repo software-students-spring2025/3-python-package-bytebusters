@@ -1,10 +1,41 @@
-# import morse_code_converter as morse
-
+import argparse
+import sys
+from .file_converter import convert_morse_file
+from .morse_code_converter import text_to_morse, morse_to_text
 
 def main():
-    # TODO: Implement main
-    print("test")
+    parser = argparse.ArgumentParser(description="Morse Code Converter")
+    
+    parser.add_argument(
+        "-t", "--text", help="Convert text to Morse code", type=str
+    )
+    parser.add_argument(
+        "-m", "--morse", help="Convert Morse code to text", type=str
+    )
+    parser.add_argument(
+        "-if", "--input_file", help="Input file path for file conversion"
+    )
+    parser.add_argument(
+        "-of", "--output_file", help="Output file path for file conversion"
+    )
+    parser.add_argument(
+        "-f", "--file_mode", choices=["morse_to_text", "text_to_morse"], 
+        help="Mode for file conversion"
+    )
 
+    args = parser.parse_args()
+
+    if args.text:
+        print(text_to_morse(args.text))
+
+    elif args.morse:
+        print(morse_to_text(args.morse))
+
+    elif args.input_file and args.output_file and args.file_mode:
+        convert_morse_file(args.input_file, args.output_file, args.file_mode)
+
+    else:
+        print("Invalid command! Use -h for help.")
 
 if __name__ == "__main__":
     main()
