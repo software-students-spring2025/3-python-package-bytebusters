@@ -8,6 +8,7 @@ pytest = "*"
 build = "*"
 numpy = ">=1.21, <1.26"
 morse-code-converter = "*"
+sounddevice = "*"
 
 [dev-packages]
 ruff = "*"
