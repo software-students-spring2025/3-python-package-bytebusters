@@ -20,7 +20,6 @@ setup(
     "sounddevice>=0.4.6",
     "numpy>=2.2.4",
     "pytest",
-    "simpleaudio",
     ],
     keywords="morse code converter text",
     project_urls={
