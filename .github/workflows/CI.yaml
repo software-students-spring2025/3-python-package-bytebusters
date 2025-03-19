@@ -38,6 +38,7 @@ jobs:
     permissions:
       id-token: write  
     steps:
+    - uses: actions/checkout@v4
     - uses: kojoru/prepare-pipenv@v1
     - name: building wheel
       run: |
