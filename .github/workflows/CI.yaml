@@ -38,6 +38,7 @@ jobs:
     permissions:
       id-token: write  
     steps:
+    - uses: kojoru/prepare-pipenv@v1
     - name: building wheel
       run: |
         pipenv install twine
