@@ -6,8 +6,8 @@ name = "pypi"
 [packages]
 pytest = "*"
 build = "*"
-morse-code-converter = {file = ".", editable = true}
-numpy = "*"
+numpy = ">=1.21, <1.26"
+morse-code-converter = "*"
 
 [dev-packages]
 ruff = "*"
