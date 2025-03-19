@@ -1,30 +1,36 @@
 name: CI
+
 on:
   pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     strategy:
       matrix:
         python-version: ["3.9", "3.11"]
+
     steps:
       - uses: actions/checkout@v4
-      - name: Install Python, pipenv and Pipfile packages
+
+      - name: Install Python, pipenv, and Pipfile packages
         uses: kojoru/prepare-pipenv@v1
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Turn on 'editable' mode
+      - name: Install dependencies
         run: |
-          pipenv install -e .
+          sudo apt-get update
+          sudo apt-get install -y portaudio19-dev  # Required for sounddevice
+
+      - name: Install Project Dependencies
+        run: |
+          pipenv install --dev
 
       - name: Lint with ruff
         uses: astral-sh/ruff-action@v3
 
       - name: Test with pytest
         run: |
-          pipenv install pytest
-          pipenv --venv
-          pipenv run python -m pytest
+          pipenv run pytest

@@ -1,5 +1,3 @@
-import os
-import pytest
 from src.morse.file_converter import convert_morse_file
 
 def test_morse_to_text_file_conversion(tmp_path):

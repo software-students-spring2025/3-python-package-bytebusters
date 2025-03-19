@@ -9,7 +9,11 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/orgs/software-students-spring2025/teams/bytebusters",
     packages=find_packages(),
-    install_requires=[],
+    install_requires=[
+    "sounddevice>=0.4.6",
+    "numpy>=2.2.4",
+    "pytest",
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

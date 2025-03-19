@@ -1,3 +1,7 @@
+import time
+import sounddevice as sd
+import numpy as np
+
 MORSE_CODE_DICT = {
     "A": ".-",
     "B": "-...",
@@ -54,7 +58,7 @@ MORSE_CODE_DICT = {
 REVERSE_MORSE_CODE_DICT = {value: key for key, value in MORSE_CODE_DICT.items()}
 
 
-def text_to_morse(text):
+def text_to_morse(text, play_sound=False):
     text = text.upper()
     morse_code = []
 
@@ -62,13 +66,17 @@ def text_to_morse(text):
         if char in MORSE_CODE_DICT:
             morse_code.append(MORSE_CODE_DICT[char])
         else:
-            raise ValueError(
-                f"Unsupported character: '{char}'. Only characters in the Morse code dictionary are supported."
-            )
-    return " ".join(morse_code)
+            raise ValueError(f"Unsupported character: '{char}'.")
+
+    morse_output = " ".join(morse_code)
+
+    if play_sound:
+        play_morse_sound(morse_output)  
+
+    return morse_output
 
 
-def morse_to_text(morse_code):
+def morse_to_text(morse_code, play_sound=False):
     morse_code = morse_code.strip()
     morse_words = morse_code.split(" / ")
     text = []
@@ -83,6 +91,9 @@ def morse_to_text(morse_code):
                     f"Invalid Morse code: '{morse_char}'. Only valid Morse code patterns are supported."
                 )
         text.append(" ")
+
+    if play_sound:
+        play_morse_sound(morse_code)
 
     return "".join(text).strip()
 
@@ -107,3 +118,35 @@ def is_valid_morse(morse_code):
 
 def get_morse_alphabet():
     return MORSE_CODE_DICT.copy()
+
+
+DOT_DURATION = 0.2 
+DASH_DURATION = 0.7
+FREQUENCY = 800  
+
+def play_morse_sound(morse_code):
+    """
+    Play Morse code as sound.
+
+    - Dot (.) = Short beep
+    - Dash (-) = Long beep
+    - Space (' ') = Pause
+    """
+    for symbol in morse_code:
+        if symbol == ".":
+            play_beep(DOT_DURATION)
+        elif symbol == "-":
+            play_beep(DASH_DURATION)
+        elif symbol == " ":
+            time.sleep(DOT_DURATION) 
+        elif symbol == "/":
+            time.sleep(DASH_DURATION)  
+
+def play_beep(duration):
+    sample_rate = 44100  
+    frequency = 250 
+    t = np.linspace(0, duration, int(sample_rate * duration), False)
+    wave = 0.5 * np.sin(2 * np.pi * frequency * t)  
+    sd.play(wave, samplerate=sample_rate)
+    sd.wait()
+
