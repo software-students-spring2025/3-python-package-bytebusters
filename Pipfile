@@ -8,7 +8,6 @@ pytest = "*"
 build = "*"
 morse-code-converter = {file = ".", editable = true}
 numpy = "*"
-simpleaudio = "*"
 
 [dev-packages]
 ruff = "*"
