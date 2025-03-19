@@ -28,3 +28,22 @@ jobs:
           pipenv install pytest
           pipenv --venv
           pipenv run python -m pytest
+
+  pypi-publish:
+    name: Upload release to PyPI
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/<your-pypi-project-name>
+    permissions:
+      id-token: write  
+    steps:
+    - name: building wheel
+      run: |
+        pipenv install twine
+        pipenv --venv
+        python -m build 
+        twine check dist/*
+        twine upload -r testpypi dist/*
+    - name: Publish package distributions to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
