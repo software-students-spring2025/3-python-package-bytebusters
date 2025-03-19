@@ -16,6 +16,12 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
+    install_requires=[
+    "sounddevice>=0.4.6",
+    "numpy>=2.2.4",
+    "pytest",
+    "simpleaudio",
+    ],
     keywords="morse code converter text",
     project_urls={
         "Documentation": "https://github.com/orgs/software-students-spring2025/teams/bytebusters#readme",
