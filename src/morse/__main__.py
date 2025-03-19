@@ -1,5 +1,4 @@
 import argparse
-import sys
 from .file_converter import convert_morse_file
 from .morse_code_converter import text_to_morse, morse_to_text
 
