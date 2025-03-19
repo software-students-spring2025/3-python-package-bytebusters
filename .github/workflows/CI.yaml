@@ -43,6 +43,7 @@ jobs:
     - name: building wheel
       run: |
         pipenv install twine
+        pipenv install build
         pipenv --venv
         python -m build 
         twine check dist/*
