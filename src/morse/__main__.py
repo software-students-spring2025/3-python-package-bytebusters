@@ -13,23 +13,24 @@ def main():
         "-m", "--morse", help="Convert Morse code to text", type=str
     )
     parser.add_argument(
-        "-if", "--input_file", help="Input file path for file conversion"
+        "-i", "--input_file", help="Input file path for file conversion"
     )
     parser.add_argument(
-        "-of", "--output_file", help="Output file path for file conversion"
+        "-o", "--output_file", help="Output file path for file conversion"
     )
     parser.add_argument(
-        "-f", "--file_mode", choices=["morse_to_text", "text_to_morse"], 
+        "--file_mode", choices=["morse_to_text", "text_to_morse"], 
         help="Mode for file conversion"
     )
+    parser.add_argument("--sound", action="store_true", help="Play Morse code sound")
 
     args = parser.parse_args()
 
     if args.text:
-        print(text_to_morse(args.text))
+        print(text_to_morse(args.text, play_sound=args.sound))
 
     elif args.morse:
-        print(morse_to_text(args.morse))
+        print(morse_to_text(args.morse, play_sound=args.sound))
 
     elif args.input_file and args.output_file and args.file_mode:
         convert_morse_file(args.input_file, args.output_file, args.file_mode)
