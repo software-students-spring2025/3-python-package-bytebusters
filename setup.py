@@ -9,18 +9,17 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/orgs/software-students-spring2025/teams/bytebusters",
     packages=find_packages(),
-    install_requires=[],
+    install_requires=[
+    "sounddevice>=0.4.6",
+    "numpy>=2.2.4",
+    "pytest",
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    install_requires=[
-    "sounddevice>=0.4.6",
-    "numpy>=2.2.4",
-    "pytest",
-    ],
     keywords="morse code converter text",
     project_urls={
         "Documentation": "https://github.com/orgs/software-students-spring2025/teams/bytebusters#readme",
