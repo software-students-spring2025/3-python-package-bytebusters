@@ -4,11 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pytest = "*"
 build = "*"
 numpy = ">=1.21,<1.26"
 morse-code-converter = "*"
 sounddevice = "*"
+pytest = "*"
 
 [dev-packages]
 ruff = "*"
