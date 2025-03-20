@@ -11,12 +11,16 @@ The Morse Code Converter is a Python package that facilitates the conversion bet
 - [Willow](https://github.com/Willow-Zero)
 - [Leo Wu](https://github.com/leowu777)
 
+## Link to PyPI website
+
+- [Morse code converter](https://pypi.org/project/text-morse-code-converter/0.1.0/)
+
 ## Features
 
-- **Text to Morse Code Conversion:** Convert any given text into its Morse code representation.​
-- **Morse Code to Text Conversion:** Decode Morse code sequences back into plain text.​
-- **File Conversion:** Process files to convert their contents between text and Morse code.
-- **Morse Code to Audio:** Can play sound for morse code through a combination of long and short beeps.
+- Text to Morse Code Conversion: Convert any given text into its Morse code representation.​
+- Morse Code to Text Conversion: Decode Morse code sequences back into plain text.​
+- File Conversion: Process files to convert their contents between text and Morse code.
+- Morse Code to Audio: Can play sound for morse code through a combination of long and short beeps.
 
 ## Development set up
 
@@ -33,10 +37,18 @@ The Morse Code Converter is a Python package that facilitates the conversion bet
 - Example commands for morse input file to text output file: `PYTHONPATH=src python -m morse --input_file input.txt --output_file output.txt --file_mode morse_to_text`
 - Example commands for including a sound output: `PYTHONPATH=src python -m morse --text "HELLO WORLD" --sound`
 
-## Testing
+## How to run unit tests
 
-1. Follow steps in development set up .
-2. Run `pytest`.
+Some example unit tests are included within the `tests` directory. To run these tests...
+
+1. Follow steps in development set up.
+2. Install `pytest` into the virtual environment by the command `pipenv install pytest`.
+3. Run `pytest` in the main project directory.
+4. Tests should never fail. Any failed tests indicate that the production code is behaving differently from the behavior expected.
+
+## Continuous integration
+
+This project has a continuous integration workflow that builds and runs unit tests with every code update to Github.
 
 ## How to contribute
 
