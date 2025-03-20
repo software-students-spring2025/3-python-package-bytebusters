@@ -1,5 +1,5 @@
 import pytest
-from src.morse.morse_code_converter import text_to_morse, morse_to_text
+from src.morse.text_morse_code_converter import text_to_morse, morse_to_text
 
 class Tests:
 	def test_morseEncoderCorrectness(self):

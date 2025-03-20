@@ -1,5 +1,5 @@
 import os
-from .morse_code_converter import text_to_morse, morse_to_text
+from .text_morse_code_converter import text_to_morse, morse_to_text
 
 def convert_morse_file(input_file, output_file, mode="morse_to_text"):
     """
