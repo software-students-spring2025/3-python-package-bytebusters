@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+
+=======
 ![Python build & test](https://github.com/software-students-spring2025/3-python-package-bytebusters/blob/andy/.github/workflows/CI.yaml/badge.svg)
 
 # Morse Code Converter
@@ -56,3 +60,4 @@ We welcome contributions from the community. To set up the development environme
 
 1. Clone this repo.
 2. Follow the steps in development set up.
+>>>>>>> 1ab4d732a078db9a769d68859cc12c49ff4a7a4a
