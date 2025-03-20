@@ -13,7 +13,7 @@ The Morse Code Converter is a Python package that facilitates the conversion bet
 
 ## Link to PyPI website
 
-- [Morse code converter](https://pypi.org/project/text-morse-code-converter/0.1.0/)
+- [Morse code converter](https://pypi.org/project/text-morse-code-converter/0.1.2/)
 
 ## Features
 
