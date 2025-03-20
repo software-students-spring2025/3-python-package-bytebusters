@@ -1,4 +1,3 @@
-import pytest
 from src.morse.message_generator import generate_message
 
 def test_generate_message():
