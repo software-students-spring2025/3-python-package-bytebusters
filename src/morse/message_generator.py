@@ -1,4 +1,4 @@
-from morse_code_converter import text_to_morse
+from .morse_code_converter import text_to_morse
 
 def generate_message(text, play_sound=False, save_to_file=None):
   
