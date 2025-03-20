@@ -1,6 +1,6 @@
 import argparse
 from .file_converter import convert_morse_file
-from .text_morse_code_converter import text_to_morse, morse_to_text
+from .morse_code_converter import text_to_morse, morse_to_text
 
 def main():
     parser = argparse.ArgumentParser(description="Morse Code Converter")

@@ -1,4 +1,4 @@
-from src.morse.file_converter import convert_morse_file
+from src.text_morse_code_converter.file_converter import convert_morse_file
 
 def test_morse_to_text_file_conversion(tmp_path):
     input_file = tmp_path / "morse_input.txt"
