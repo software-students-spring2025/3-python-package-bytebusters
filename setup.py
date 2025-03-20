@@ -1,14 +1,15 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="text_morse_code_converter",
+    name="text_morse_code_converter", 
+    packages=find_packages(where="src"),  
+    package_dir={"": "src"}, 
     version="0.1.0",
     author="Byte Busters",
     description="A Python package to convert text to Morse code and vice versa.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/orgs/software-students-spring2025/teams/bytebusters",
-    packages=find_packages(),
     install_requires=[
     "sounddevice>=0.4.6",
     "numpy>=2.2.4",
