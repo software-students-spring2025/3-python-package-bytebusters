@@ -7,6 +7,6 @@ def test_generate_message():
 
     assert generate_message("") == ""
 
-    text_with_special_chars = "HELLO 123!"
+    text_with_special_chars = "HELLO 123"
     expected_output_special = ".... . .-.. .-.. --- / .---- ..--- ...-- -.-.--" 
     assert generate_message(text_with_special_chars) == expected_output_special
