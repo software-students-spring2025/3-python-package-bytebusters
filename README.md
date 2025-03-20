@@ -25,17 +25,17 @@ The Morse Code Converter is a Python package that facilitates the conversion bet
 ## Development set up
 
 1. Install Python (3.11+), pipenv, and Git.
-2. Navigate to the project folder, start a virtual environment `python -m venv venv`, and activate it by `source venv/bin/activate ` for Mac users or `venv\Scripts\activate` for Windows users.
-3. Install dependencies `pip install -r requirements.txt`
-4. Run the package using commands below.
+2. Make sure pipenv is installed `pip install pipenv`
+3. Activate the virtual environment with `pipenv shell`
+4. Install package with `pip install -e .` (please include the dot after -e).
 
 ## Example commands to run the package
 
-- Example commands for text to morse: `PYTHONPATH=src python -m morse --text "HELLO WORLD"`
-- Example commands for morse to text: `PYTHONPATH=src python -m morse --morse ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."`
-- Example commands for text input file to morse output file: `PYTHONPATH=src python -m morse --input_file input.txt --output_file output.txt --file_mode text_to_morse`
-- Example commands for morse input file to text output file: `PYTHONPATH=src python -m morse --input_file input.txt --output_file output.txt --file_mode morse_to_text`
-- Example commands for including a sound output: `PYTHONPATH=src python -m morse --text "HELLO WORLD" --sound`
+- Example commands for text to morse: `python -m text_morse_code_converter --text "HELLO WORLD"`
+- Example commands for morse to text: `python -m text_morse_code_converter --morse ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."`
+- Example commands for text input file to morse output file: `python -m text_morse_code_converter --input_file input.txt --output_file output.txt --file_mode text_to_morse`
+- Example commands for morse input file to text output file: `python -m text_morse_code_converter --input_file input.txt --output_file output.txt --file_mode morse_to_text`
+- Example commands for including a sound output: `python -m text_morse_code_converter --text "HELLO WORLD" --sound`
 
 ## How to run unit tests
 
@@ -43,7 +43,7 @@ Some example unit tests are included within the `tests` directory. To run these 
 
 1. Follow steps in development set up.
 2. Install `pytest` into the virtual environment by the command `pipenv install pytest`.
-3. Run `pytest` in the main project directory.
+3. Run `pipenv run pytest` in the main project directory.
 4. Tests should never fail. Any failed tests indicate that the production code is behaving differently from the behavior expected.
 
 ## Continuous integration
