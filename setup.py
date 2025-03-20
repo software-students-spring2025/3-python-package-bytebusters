@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
  
-setuptools.setup(
+setup(
     name="text_morse_code_converter", 
     packages=find_packages(where="src"),  
     package_dir={"": "src"}, 
