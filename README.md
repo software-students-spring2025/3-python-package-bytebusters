@@ -1,4 +1,4 @@
-![Python build & test](https://github.com/software-students-spring2025/3-python-package-bytebusters/blob/main/.github/workflows/CI.yaml/badge.svg)
+![Python build & test](https://github.com/software-students-spring2025/3-python-package-bytebusters/blob/main/.github/workflows/CI.yaml/badge.svg?branch=andy)
 
 # Morse Code Converter
 
@@ -21,11 +21,11 @@ The Morse Code Converter is a Python package that facilitates the conversion bet
 ## Development set up
 
 1. Install Python (3.11+), pipenv, and Git.
-2. Navigate to the project folder, start a virtual environment `python -m venv venv`, and activate it by `source venv/bin/activate ` for mac and `venv\Scripts\activate` for windows.
+2. Navigate to the project folder, start a virtual environment `python -m venv venv`, and activate it by `source venv/bin/activate ` for Mac users or `venv\Scripts\activate` for Windows users.
 3. Install dependencies `pip install -r requirements.txt`
 4. Run the package using commands below.
 
-## Running the package in terminal
+## Example commands to run the package
 
 - Example commands for text to morse: `PYTHONPATH=src python -m morse --text "HELLO WORLD"`
 - Example commands for morse to text: `PYTHONPATH=src python -m morse --morse ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."`
