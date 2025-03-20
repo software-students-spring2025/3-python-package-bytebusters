@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="morse_code_converter_bytebusters",
+    name="text_morse_code_converter",
     version="0.1.0",
     author="Byte Busters",
     description="A Python package to convert text to Morse code and vice versa.",
