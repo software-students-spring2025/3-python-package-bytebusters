@@ -1,4 +1,4 @@
-from src.morse.message_generator import generate_message
+from src.text_morse_code_converter.message_generator import generate_message
 
 def test_generate_message():
     text = "HELLO"
