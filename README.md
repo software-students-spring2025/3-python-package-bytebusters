@@ -1,4 +1,4 @@
-![Python build & test](https://github.com/software-students-spring2025/3-python-package-bytebusters/blob/andy/.github/workflows/CI.yaml/badge.svg)
+[![CI](https://github.com/software-students-spring2025/3-python-package-bytebusters/actions/workflows/CI.yaml/badge.svg)](https://github.com/software-students-spring2025/3-python-package-bytebusters/actions/workflows/CI.yaml)
 
 # Morse Code Converter
 
